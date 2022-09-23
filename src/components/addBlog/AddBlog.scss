@@ -1,0 +1,115 @@
+.add-blog {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 2rem;
+    background-color: rgba(221, 221, 221, 0.4);
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  .form {
+    background-color: white;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+
+    input {
+      margin-block: 1rem;
+
+      width: 100%;
+      max-width: 40rem;
+
+      padding: 1rem;
+      border-radius: 14px;
+
+      border: none;
+      border: solid 1px;
+      border-color: rgb(220, 217, 217);
+    }
+
+    #news {
+      height: 7rem;
+    }
+
+    #photo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 40rem;
+      width: 100%;
+
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+      }
+
+      button {
+        cursor: pointer;
+        min-width: fit-content;
+        background-color: #007fff;
+        color: white;
+        padding: 1rem 2rem;
+        margin-left: 1rem;
+
+        border: none;
+        border-radius: 10px;
+      }
+    }
+    .btns {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      margin-top: 2rem;
+
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+
+        :nth-child(2) button {
+          margin-top: 15px;
+          cursor: pointer;
+          min-width: fit-content;
+          background-color: #007fff;
+          color: white;
+          padding: 1rem 2rem;
+          margin-left: 0rem;
+          width: 100%;
+          border: none;
+          border-radius: 10px;
+        }
+        :first-child button {
+          background-color: whitesmoke;
+          color: gray;
+          cursor: pointer;
+          min-width: fit-content;
+          padding: 1rem 2rem;
+          margin-left: 0rem;
+
+          width: 100%;
+
+          border: none;
+          border-radius: 10px;
+        }
+      }
+
+      button {
+        cursor: pointer;
+        min-width: fit-content;
+        background-color: #007fff;
+        color: white;
+        padding: 1rem 2rem;
+        margin-left: 1rem;
+
+        border: none;
+        border-radius: 10px;
+      }
+      :first-child button {
+        background-color: white;
+        color: gray;
+      }
+    }
+  }
+}

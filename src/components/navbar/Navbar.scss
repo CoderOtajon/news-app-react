@@ -1,0 +1,132 @@
+.wrapper {
+  width: 100%;
+  max-width: 2000px;
+  margin-inline: auto;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+
+  padding: 1rem 2rem;
+
+  width: 100%;
+
+  .nav__right_sm {
+    display: none;
+
+    .open-btn > svg {
+      &:hover {
+        color: rgb(166, 166, 166);
+      }
+
+      cursor: pointer;
+      font-size: 2rem;
+      color: rgb(85, 85, 85);
+      margin-left: 1rem;
+    }
+    @media screen and (max-width: 1060px) {
+      display: block;
+    }
+
+    .menu {
+      background-color: rgb(73, 103, 253);
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      z-index: 1;
+
+      height: 100vh;
+      width: clamp(50%, 100%, 100%);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      justify-content: flex-start;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        margin-top: 4rem;
+
+        a {
+          text-decoration: none;
+          font-size: clamp(1rem, 7vw, 2rem);
+          color: white;
+
+          &:hover {
+            color: rgb(216, 215, 215);
+          }
+        }
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        margin: 1rem;
+
+        > svg {
+          cursor: pointer;
+          font-size: 2.6rem;
+          color: white;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .nav__right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: 1060px) {
+      display: none;
+    }
+
+    .MuiBadge-dot {
+      top: 36%;
+      right: 25%;
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      background-color: rgb(209, 65, 65);
+    }
+
+    .nav__loggedUser {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-inline: 2rem;
+        font-size: 3rem;
+        color: rgb(38, 90, 38);
+        // background-color: rgba(221, 221, 221, 0.7);
+        border: 2px solid rgb(73, 103, 253);
+        border-radius: 50%;
+      }
+
+      div {
+        margin-right: 2.5em;
+
+        h3 {
+          font-size: 17px;
+        }
+        p {
+          font-size: 15px;
+          color: gray;
+        }
+      }
+    }
+  }
+}
